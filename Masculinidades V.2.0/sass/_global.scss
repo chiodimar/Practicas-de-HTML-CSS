@@ -1,0 +1,304 @@
+@use "componentes";
+
+@mixin posicion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+//HEADER
+
+.header{
+    background-color: componentes.$color-magenta;
+    a .logo{
+        width: 15rem;
+    }
+}
+
+//PORTADA
+
+.sec-portada{
+    background-color: componentes.$color-violeta;
+    @include posicion();
+    .titulos{
+        @include posicion();
+        h1{
+            color: componentes.$color-amarillo;
+            margin: 5rem 1rem 2rem 1rem;
+            // font-family: 'Familjen Grotesk', sans-serif;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 7rem;
+            font-weight: 500;
+            text-align: center;
+
+        }
+        span{
+            color: componentes.$color-amarillo;
+            margin: 2rem;
+            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+        .divisor{
+            height: 0.1rem;
+            width: 75%;
+            background-color: componentes.$color-amarillo;
+        }
+    }
+    .boton-portada{
+        margin: 1rem;
+        border: none;
+        background-color: componentes.$color-violeta;
+        color: componentes.$color-amarillo;
+        font-size: 1.5rem;
+       /*  &:hover{
+            border-bottom: 2px solid componentes.$color-amarillo;
+        } */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .sec-portada .titulos h1{
+        font-size: 4rem ;
+    }
+}
+
+
+//TARJETAS
+
+.sec-tarjetas{
+    background-color: black;
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .tarjeta-principal{
+        width: 25rem;
+        .numero{
+            color: componentes.$color-verde;
+            font-size: 4rem;
+            font-weight: 500;
+        }
+        .tarjeta{
+            border: 5px solid white;
+            width: 100%;
+            .imagen-tarjeta{
+                width: 100%;
+                height: 300px;
+            }
+            .textos-tarjetas{
+                color: componentes.$color-verde;
+                h2{
+                    font-size: 2.6rem;
+                    text-align: center;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                }
+                ul{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+//FRASE
+
+.sec-frase{
+    display: flex;
+    flex-direction: row;
+    background-color: componentes.$color-amarillo;
+    padding: 3rem;
+    align-items: center;
+    // flex-wrap: wrap;
+    .frase{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 3rem;
+        img{
+            width: 3rem;
+        }
+        p{
+            font-size: 1.5rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            margin-right: 2rem;
+            color: black;
+        }
+        .boton-portada{
+            button{
+                margin: 1rem;
+                border: none;
+                background-color: componentes.$color-amarillo;
+                color: black;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            i{
+                color: black;
+            }
+        }
+    }
+    .imagen-frase{
+        img{
+            width:100%;
+            border: 5px solid componentes.$color-violeta;
+            margin-left: auto; 
+            margin-right: auto;
+        }
+    }
+}
+
+@media (max-width: 959px) {
+    .imagen-frase img{
+        display: none;
+    }
+}
+
+//VIDEO
+
+.sec-video{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color:componentes.$color-magenta;
+    padding: 4rem 3rem 4rem 4rem;
+    width: 100%;
+    .video{
+        width: 50%;
+    }
+    .texto-video{
+        width: 50%;
+        
+        h3{
+            font-size: 4rem;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: black;
+            font-weight: 700;
+        }
+        span{
+            color: black;
+            font-size: 1.6rem;
+            font-weight: 800;
+            font-family: 'Poppins', sans-serif;
+        }
+        p{
+            color: black;
+            font-size: 1.4rem;
+            font-family: 'Poppins', sans-serif;
+        }
+        .boton-portada{
+            button{
+                margin: 1rem 0;
+                border: none;
+                background-color: componentes.$color-magenta;
+                color: black;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            i{
+                color: black;
+            }
+        }
+    }
+}
+
+@media (max-width: 959px) {
+    .sec-video .video{
+        display: none;
+    }
+}
+
+
+//CONTACTO
+
+.sec-contacto{
+    background-color: componentes.$color-verde;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+
+    h3{
+        margin: 3rem 0 0 0;
+        font-size: 4rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: componentes.$color-amarillo;
+        font-weight: 700;
+    }
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+        gap: 2rem;
+        .nombre-contacto{
+            height: 2.6rem;
+            border-radius: 5px;
+            border: none;
+        }
+        .mail-contacto{
+            height: 2.6rem;
+            border-radius: 5px;
+            border: none;
+        }
+        textarea{
+            border-radius: 5px;
+            border: none;
+        }
+    }
+    button{
+        width: 20%;
+        margin-top: 2rem;
+        border: none;
+        background-color:componentes.$color-amarillo;
+        border-radius: 5px;
+        height: 2.7rem;
+        color: componentes.$color-verde;
+        font-size: 1.4rem;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+
+//FOOTER
+
+.sec-footer{
+    background-color: componentes.$color-violeta;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+.sociales{
+    .iconos-sociales{
+        color: aliceblue;
+        font-size: 3rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    span{
+        color: aliceblue;
+        font-size: 1.3rem;
+    }
+}
+    .logo-footer{
+        display: flex;
+        flex-direction: column;
+        
+        img{
+            width: 15rem;
+            margin-bottom: 1rem;
+        }
+        span{
+            color: aliceblue;
+            font-size: 1rem;
+        }
+
+}
+}

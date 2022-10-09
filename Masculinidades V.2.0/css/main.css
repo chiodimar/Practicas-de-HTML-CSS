@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@700&family=Poppins:wght@500&display=swap");
+.header {
+  background-color: #DB3EB1;
+}
+.header a .logo {
+  width: 15rem;
+}
+
+.sec-portada {
+  background-color: #702F8A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.sec-portada .titulos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.sec-portada .titulos h1 {
+  color: #F3E600;
+  margin: 5rem 1rem 2rem 1rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 7rem;
+  font-weight: 500;
+  text-align: center;
+}
+.sec-portada .titulos span {
+  color: #F3E600;
+  margin: 2rem;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+.sec-portada .titulos .divisor {
+  height: 0.1rem;
+  width: 75%;
+  background-color: #F3E600;
+}
+.sec-portada .boton-portada {
+  margin: 1rem;
+  border: none;
+  background-color: #702F8A;
+  color: #F3E600;
+  font-size: 1.5rem;
+  /*  &:hover{
+       border-bottom: 2px solid componentes.$color-amarillo;
+   } */
+}
+
+@media (max-width: 768px) {
+  .sec-portada .titulos h1 {
+    font-size: 4rem;
+  }
+}
+.sec-tarjetas {
+  background-color: black;
+  padding: 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sec-tarjetas .tarjeta-principal {
+  width: 25rem;
+}
+.sec-tarjetas .tarjeta-principal .numero {
+  color: #00CFB4;
+  font-size: 4rem;
+  font-weight: 500;
+}
+.sec-tarjetas .tarjeta-principal .tarjeta {
+  border: 5px solid white;
+  width: 100%;
+}
+.sec-tarjetas .tarjeta-principal .tarjeta .imagen-tarjeta {
+  width: 100%;
+  height: 300px;
+}
+.sec-tarjetas .tarjeta-principal .tarjeta .textos-tarjetas {
+  color: #00CFB4;
+}
+.sec-tarjetas .tarjeta-principal .tarjeta .textos-tarjetas h2 {
+  font-size: 2.6rem;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.sec-tarjetas .tarjeta-principal .tarjeta .textos-tarjetas ul {
+  font-size: 1.3rem;
+}
+
+.sec-frase {
+  display: flex;
+  flex-direction: row;
+  background-color: #F3E600;
+  padding: 3rem;
+  align-items: center;
+}
+.sec-frase .frase {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 3rem;
+}
+.sec-frase .frase img {
+  width: 3rem;
+}
+.sec-frase .frase p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin-right: 2rem;
+  color: black;
+}
+.sec-frase .frase .boton-portada button {
+  margin: 1rem;
+  border: none;
+  background-color: #F3E600;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.sec-frase .frase .boton-portada i {
+  color: black;
+}
+.sec-frase .imagen-frase img {
+  width: 100%;
+  border: 5px solid #702F8A;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 959px) {
+  .imagen-frase img {
+    display: none;
+  }
+}
+.sec-video {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #DB3EB1;
+  padding: 4rem 3rem 4rem 4rem;
+  width: 100%;
+}
+.sec-video .video {
+  width: 50%;
+}
+.sec-video .texto-video {
+  width: 50%;
+}
+.sec-video .texto-video h3 {
+  font-size: 4rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: black;
+  font-weight: 700;
+}
+.sec-video .texto-video span {
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+}
+.sec-video .texto-video p {
+  color: black;
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+}
+.sec-video .texto-video .boton-portada button {
+  margin: 1rem 0;
+  border: none;
+  background-color: #DB3EB1;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.sec-video .texto-video .boton-portada i {
+  color: black;
+}
+
+@media (max-width: 959px) {
+  .sec-video .video {
+    display: none;
+  }
+}
+.sec-contacto {
+  background-color: #00CFB4;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+.sec-contacto h3 {
+  margin: 3rem 0 0 0;
+  font-size: 4rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: #F3E600;
+  font-weight: 700;
+}
+.sec-contacto .inputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+.sec-contacto .inputs .nombre-contacto {
+  height: 2.6rem;
+  border-radius: 5px;
+  border: none;
+}
+.sec-contacto .inputs .mail-contacto {
+  height: 2.6rem;
+  border-radius: 5px;
+  border: none;
+}
+.sec-contacto .inputs textarea {
+  border-radius: 5px;
+  border: none;
+}
+.sec-contacto button {
+  width: 20%;
+  margin-top: 2rem;
+  border: none;
+  background-color: #F3E600;
+  border-radius: 5px;
+  height: 2.7rem;
+  color: #00CFB4;
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.sec-footer {
+  background-color: #702F8A;
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.sec-footer .sociales .iconos-sociales {
+  color: aliceblue;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sec-footer .sociales span {
+  color: aliceblue;
+  font-size: 1.3rem;
+}
+.sec-footer .logo-footer {
+  display: flex;
+  flex-direction: column;
+}
+.sec-footer .logo-footer img {
+  width: 15rem;
+  margin-bottom: 1rem;
+}
+.sec-footer .logo-footer span {
+  color: aliceblue;
+  font-size: 1rem;
+}/*# sourceMappingURL=main.css.map */
